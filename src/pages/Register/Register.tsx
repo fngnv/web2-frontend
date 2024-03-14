@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
 import { useState } from 'react';
 import './Register.css';
+import { useNavigate } from 'react-router-dom';
 
 const RegisterPage = () => {
 
@@ -14,6 +15,7 @@ const RegisterPage = () => {
   });
 
   const [userCreatedResponse, setUserCreatedResponse] = useState(null);
+  const navigate = useNavigate();
 
   const updateInput: any = (inputAttribute: any) => (event: any) => {
     setInputs({...inputs, [inputAttribute]: event.target.value});
@@ -53,7 +55,7 @@ const RegisterPage = () => {
     } else {
       setUserCreatedResponse(responseData);
       alert('Käyttäjä luotu onnistuneesti!');
-      window.location.href = '/kirjaudu';
+      navigate('/kirjaudu');
 
     }
   }

@@ -3,12 +3,14 @@ import {Container, Row, Col, Card, ListGroup, Button} from 'react-bootstrap';
 import './OffersList.css';
 import { Link } from 'react-router-dom';
 import {getCookie} from "typescript-cookie";
+import { useNavigate } from 'react-router-dom';
 
 const OffersList = () => {
 
   const [offers, setOffers] = React.useState([]);
   //const popular = [
   const [isLoggedIn, setIsLoggedIn] = React.useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     const fetchOffers = async () => {
@@ -85,7 +87,7 @@ const OffersList = () => {
         </Col>
         <Col xs={12} md={4}>
           {isLoggedIn && (
-              <Button className={"btn-custom"} onClick={() => window.location.href = '/uusitarjous'}>
+              <Button className={"btn-custom"} onClick={() => navigate('/uusitarjous')}>
                 Lisää tarjous
               </Button>
           )}

@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 import { useState } from 'react';
 import { getCookie } from 'typescript-cookie';
 import './ReviewsNew.css';
+import { useNavigate } from 'react-router-dom';
 
 
 const NewReview = () => {
@@ -16,6 +17,7 @@ const NewReview = () => {
         reviewFile: 'noname.jpg',
     });
 
+    const navigate = useNavigate();
     const [categories, setCategories] = useState([]);
 
     useEffect(() => {
@@ -100,7 +102,7 @@ const NewReview = () => {
             sendNotifications(responseData.data.addReview.category.name);
             setReviewCreatedResponse(responseData);
             alert('Arvostelu luotu onnistuneesti!');
-            window.location.href = '/arvostelut';
+            navigate('/arvostelut');
         }
   };
 

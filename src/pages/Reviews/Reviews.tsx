@@ -1,17 +1,18 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Container, Row, Col, Form, Button } from 'react-bootstrap';
+import { Container, Row, Col, Button } from 'react-bootstrap';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import { getCookie } from 'typescript-cookie';
 import CategoriesView from '../../components/CategoriesView/CategoriesView';
 import './Reviews.css';
-import { set } from 'mobx';
+import { useNavigate } from 'react-router-dom';
 
 const ReviewsPage = () => {
 
     const [reviews, setReviews] = useState([]);
     const [isLoggedIn, setIsLoggedIn] = useState(false);
+    const navigate = useNavigate();
 
     useEffect(() => {
         const fetchReviews = async () => {
@@ -53,7 +54,7 @@ const ReviewsPage = () => {
                 </Col>
               <Col xs={12} md={4} className="categories-col">
                   {isLoggedIn && (
-                      <Button className="newreviewbutton btn-custom" onClick={() => window.location.href = '/uusiArvostelu'}>
+                      <Button className="newreviewbutton btn-custom" onClick={() => navigate('/uusiArvostelu')}>
                           Lisää uusi arvostelu!
                       </Button>
                   )}

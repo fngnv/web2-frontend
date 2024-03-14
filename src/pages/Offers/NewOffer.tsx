@@ -4,6 +4,7 @@ import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import './NewOffer.css';
 import {getCookie} from "typescript-cookie";
+import {useNavigate} from "react-router-dom";
 
 const NewOffer: React.FC = () => {
 
@@ -15,6 +16,7 @@ const NewOffer: React.FC = () => {
   });
 
   const [offerResponse, setOfferResponse] = useState('');
+  const navigate = useNavigate();
 
   const createOffer = async (event: any) => {
     event.preventDefault();
@@ -66,7 +68,7 @@ const NewOffer: React.FC = () => {
       //sendNotification();
       setOfferResponse(responseData);
       alert('Ilmoitus luotu!');
-      window.location.href = '/tarjoukset';
+      navigate('/tarjoukset');
     }
   };
 
