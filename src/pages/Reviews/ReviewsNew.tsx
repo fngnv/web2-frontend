@@ -40,10 +40,6 @@ const NewReview = () => {
         setInputs({...inputs, [inputAttribute]: event.target.value});
     }
 
-    
-
-
-
   const createReview = async (event: any) => {
     event.preventDefault();
 

@@ -21,12 +21,12 @@ const RegisterPage = () => {
     setInputs({...inputs, [inputAttribute]: event.target.value});
   }
 
-  const createAccount = async (event: any) => {
+  const createAccount = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
     if (inputs.password.length < 8) {
       alert('Salasanan minimipituus on 8 merkkiä');
-      return;
     }
-    event.preventDefault();
+    
       const mutation =
     `
       mutation {
