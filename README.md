@@ -10,27 +10,27 @@
 ## Asennusohjeet
 
 1. **Kloona Repositorio**
-   - Avaa komentorivi ja suorita seuraava komento:
+   Avaa komentorivi ja suorita seuraava komento:
      ```
      git clone <repositoryn URL>
      ```
 
 2. **Asenna Dependencies**
-   - Navigoi projektin juurikansioon komentorivillä ja suorita:
+   Navigoi projektin juurikansioon komentorivillä ja suorita:
      ```
      npm install
      ```
 
 3. **Buildaa Projekti**
-   - Kun asennus on valmis, suorita seuraava komento projektin juurikansiossa:
+   Kun asennus on valmis, suorita seuraava komento projektin juurikansiossa:
      ```
      npm run build
      ```
 
 4. **Käynnistä Serveri**
-   - Projektin buildauksen jälkeen voit käynnistää kehityspalvelimen seuraavalla komennolla:
+   Projektin buildauksen jälkeen voit käynnistää kehityspalvelimen seuraavalla komennolla:
      ```
      npm start
      ```
 
-Näiden vaiheiden suorittamisen jälkeen projektisi pitäisi olla valmis käytettäväksi paikallisesti.
+Näiden vaiheiden suorittamisen jälkeen frontend on valmis käytettäväksi paikallisesti.
