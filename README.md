@@ -4,5 +4,5 @@
 
 ### Vera Finogenova, Jhon Rastrojo López & Korpi Tolonen
 
-## Delightful Insights frontend repository
+# Delightful Insights frontend repository
 
