@@ -25,6 +25,7 @@ const RegisterPage = () => {
     event.preventDefault();
     if (inputs.password.length < 8) {
       alert('Salasanan minimipituus on 8 merkkiä');
+      return;
     }
     
       const mutation =
