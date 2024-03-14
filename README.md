@@ -9,25 +9,25 @@
 
 ## Asennusohjeet
 
-1. **Kloona Repositorio:**
+1. **Kloonaa repositorio:**
    Avaa komentorivi ja suorita seuraava komento:
      ```
      git clone <repositoryn URL>
      ```
 
-2. **Asenna Dependencies:**
+2. **Asenna dependencies:**
    Navigoi projektin juurikansioon komentorivillä ja suorita:
      ```
      npm install
      ```
 
-3. **Buildaa Projekti:**
+3. **Buildaa projekti:**
    Kun asennus on valmis, suorita seuraava komento projektin juurikansiossa:
      ```
      npm run build
      ```
 
-4. **Käynnistä Serveri:**
+4. **Käynnistä serveri:**
    Projektin buildauksen jälkeen voit käynnistää kehityspalvelimen seuraavalla komennolla:
      ```
      npm start
